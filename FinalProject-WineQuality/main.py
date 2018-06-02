@@ -1,14 +1,6 @@
 import pandas as pd
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-import matplotlib as mpl
-import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn import preprocessing
-from sklearn.linear_model import LinearRegression
-from sklearn.pipeline import make_pipeline
-from sklearn.model_selection import GridSearchCV
-from sklearn.externals import joblib
 import Demonstration
 import Kmeans
 import KNN
@@ -30,7 +22,7 @@ wines = wines.drop(['sulphates'], axis=1) # we are not using sulphates in this p
 wines = wines.sample(frac=1, random_state=42).reset_index(drop=True)
 
 #demonstration
-Demonstration.demonstrate(wines)
+#Demonstration.demonstrate(wines)
 
 
 ######################################### DATASET ORGANIZATION ##################################
@@ -49,11 +41,11 @@ X_test_scaled = scalar.transform(X_test)
 ################################## MACHINE LEARNING ALGORITHMS ##################################
 
 # K-MEANS
-Kmeans.Kmeans(wines, X)
+#Kmeans.Kmeans(wines, X)
 
 # KNN
-KNN.KNN(X_train, X_train_scaled, y_train, X_test, X_test_scaled, y_test)
+#KNN.KNN(X_train, X_train_scaled, y_train, X_test, X_test_scaled, y_test)
 
 # Linear-Regression
-LinearRegression.LinearRegression(X_train_scaled, y_train, X_test, X_test_scaled, y_test, 'all')
-LinearRegression.LinearRegression(X_train_scaled, y_train, X_test, X_test_scaled, y_test, 'some', 0, 6)
+LinearRegression.LinearReg(X_train_scaled, y_train, X_test, X_test_scaled, y_test, 'all')
+LinearRegression.LinearReg(X_train_scaled, y_train, X_test, X_test_scaled, y_test, 'some', 0, 6)
