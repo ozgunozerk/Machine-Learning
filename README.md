@@ -17,8 +17,6 @@ KNN, K-means and Linear Regression used in order to estimate the quality of give
 #### 9-	PH (acidity level from a scale 0 to 14)
 #### 10-	Alcohol (amount of alcohol, given in percentage)
 \\
-\\
-\\
 
 ## All the below implementations are made from scracth in Matlab
 
